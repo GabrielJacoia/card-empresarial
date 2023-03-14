@@ -1,0 +1,110 @@
+:root{
+    --cor-titulo:hsl(234, 12%, 34%);
+    --cor-paragrafo:hsl(229, 6%, 66%);
+    --cor-background:hsl(0, 0%, 98%);
+}
+
+body{
+    background-color:var(--cor-background)
+}
+
+.cabecalho{
+    width: 40%;
+    margin: 5px auto;
+    padding: 10px;
+    text-align: center;  
+}
+
+.cabecalho h1{
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--cor-titulo);
+}
+
+ .titulo{
+    font-weight: 600;
+    color: var(--cor-titulo);
+}
+
+ .descricao{
+    font-size: 15px;
+    font-weight: 200;
+    color: var(--cor-paragrafo);
+
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto 2fr;
+    grid-template-areas: 
+    "team" 
+    "supervisor"
+    "karma"
+    "calculator"
+    ;
+    row-gap: 20px;
+    margin: 0 auto;
+    width: 65vw;
+    padding: 10px;
+
+}
+
+.container .card{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-top: 5px solid;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 15px;
+    width: 300px;
+    
+    box-shadow: 1px 5px #e1eaf1;   
+}
+
+.card .icone{
+    align-self: flex-end;
+    margin-top: 20px;
+    padding: 5px;
+    width: 50px;
+
+}
+
+
+
+#team{
+    grid-area: team;
+    grid-column-start: 2;
+    border-color:#ff0000 ;
+    
+   
+}
+
+#calculator{
+   grid-area: calculator;
+   grid-row-start:1;
+   grid-column-start: 3;
+   grid-column-end: 4;
+   border-color:#5ca0eb ;    
+}
+
+#karma{
+    grid-area: karma;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border-color:#f9c000 ;
+}
+
+#supervisor{
+    grid-area: supervisor;
+    grid-row-start: 1;
+    border-color: #38b1aa;
+   
+    
+}
+
+
+
